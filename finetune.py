@@ -117,9 +117,7 @@ def run_training():
         model=model,
         train_dataset=dataset,
         peft_config=lora_config,
-        args=training_args,
-        dataset_text_field="text", # Tentukan field teks
-        max_seq_length=None, # Biarkan SFTTrainer yang mengurus
+        args=training_args
     )
 
     # --- 8. Mulai Training ---
@@ -198,4 +196,5 @@ def main():
         print("Tindakan tidak valid. Pilih 'train' atau 'merge'.")
 
 if __name__ == "__main__":
+
     main()
